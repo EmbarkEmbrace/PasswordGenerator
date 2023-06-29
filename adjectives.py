@@ -1,0 +1,1 @@
+adjectives = "adorable beautiful clean drab elegant fancy glamorous handsome long magnificent old-fashioned plain quaint sparkling ugliest unsightly wide-eyed".split()

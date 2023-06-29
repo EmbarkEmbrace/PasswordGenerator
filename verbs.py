@@ -1,0 +1,1 @@
+verbs = "add drop hang knit obey scatter visit allow end hug jump name reach land open stay walk bake escape imagine lock  talk use zip damage work bang fasten itch march promise turn yawn kick notice rinse call fix jog mix question untie yell chase gather vanish zoom".split()

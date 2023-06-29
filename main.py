@@ -1,26 +1,29 @@
 import random
-
-letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
-
-numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
-
-symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
+from  verbs import verbs
+from nouns import nouns
+from adjectives import adjectives
 
 print("Welcome to the PyPassword Generator!")
 
-nr_letters = int(input("How many letters would you like in your password?\n")) 
-nr_symbols = int(input(f"How many symbols would you like?\n"))
-nr_numbers = int(input(f"How many numbers would you like?\n"))
+numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
+
+verb_choice = int(input("How many verbs would you like in your password?\n")) 
+noun_choice = int(input(f"How many nouns would you like?\n"))
+number_choice = int(input(f"How many numbers would you like?\n"))
+adjective_choice = int(input(f"How many adjectives would you like?\n"))
 
 password  = ""
 
-for let in range(1, nr_letters + 1):
-  password += random.choice(letters)
+for ver in range(1, verb_choice + 1):
+  password += random.choice(verbs).capitalize()
 
-for num in range(1, nr_letters + 1):
+for nou in range(1, noun_choice + 1):
+  password += random.choice(nouns).capitalize()
+
+for num in range(1, number_choice +1):
   password += random.choice(numbers)
 
-for sym in range(1, nr_letters + 1):
-  password += random.choice(symbols)
+for adj in range(1, adjective_choice + 1):
+  password += random.choice(adjectives).capitalize()
 
-print(password)
+print(f'Your new password is "{password}"!')
