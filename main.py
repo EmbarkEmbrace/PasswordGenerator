@@ -26,4 +26,14 @@ for num in range(1, number_choice +1):
 for adj in range(1, adjective_choice + 1):
   password += random.choice(adjectives).capitalize()
 
-print(f'Your new password is "{password}"!')
+obfuscate = input(f'Your new password is "{password}"! Would you like to obfuscate it? "Yes", or "No"?\n')
+
+if obfuscate == "yes" or obfuscate == "yes":
+  obfuscated_password = list(password)
+  random.shuffle(obfuscated_password)
+  password = "".join(obfuscated_password)
+  print(f'Okay! Your obfuscated password is "{password}"!')
+elif obfuscate == "No" or obfuscate == "no":
+  print(f'Not a problem! Your password remains "{password}"!')
+else:
+  print("Sorry, your entry is unrecognized. Have a great day!")
